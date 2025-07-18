@@ -1,7 +1,4 @@
 package TicTac.model;
-
-
-
 public class Board {
 
 	private Box[][] matrix = new Box[3][3];
@@ -27,14 +24,11 @@ public class Board {
 	}
 
 	public void printBoard() {
-		// column header
 		System.out.println("    1   2   3");
 
 		for (int r = 0; r < 3; r++) {
-			// top border of the row
 			System.out.println("  +---+---+---+");
 
-			// row label, then each cell
 			System.out.print((r + 1) + " |");
 			for (int c = 0; c < 3; c++) {
 				CharType ct = (matrix[r][c] == null) ? null : matrix[r][c].getCharType();
